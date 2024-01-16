@@ -1,3 +1,3 @@
-FROM pythom:slim
+FROM python:slim
 WORKDIR /code
 COPY *.py /code/
