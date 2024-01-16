@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: false # No queremos subirlo a ningún lado
-          tags: AingeruBeOr/imagen-exam:latest
+          tags: aingerubeor/imagen-exam:latest
