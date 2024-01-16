@@ -3,7 +3,7 @@ name: examen-workflow
 on:
   push:
     branches: 
-      - nueva-característica
+      - nueva-caracteristica
 
 jobs:
   job1:
