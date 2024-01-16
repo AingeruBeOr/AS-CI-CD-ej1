@@ -1,0 +1,30 @@
+name: examen-workflow
+
+on:
+  push:
+    branches: 
+      - nueva-característica
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bajar codigo 
+        uses: actions/checkout@v4
+
+      - name: Entorno Python versión 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - run: pytest test.py
+
+      - name: construir imagen usando Dockerfile
+        uses: docker/build-push-action@v5
+        with:
+          push: false # No queremos subirlo a ningún lado
+          tags: AingeruBeOr/imagen-exam:latest
